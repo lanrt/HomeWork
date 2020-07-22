@@ -1,4 +1,8 @@
 package day02;
+
+import java.util.Date;
+import java.util.Scanner;
+
 /**
  * 实现文件重命名。
  * 要求用户输入一个文件名称，例如:abc.jpg
@@ -9,6 +13,13 @@ package day02;
  */
 public class Test05 {
 	public static void main(String[] args) {
-		
+		Scanner console = new Scanner(System.in);
+		System.out.println("输入一个文件名称：");
+		String str = console.next();
+		String regex = "\\w+\\.";// \w+\.
+		long l = System.currentTimeMillis();
+		String s = l + ".";
+		str = str.replaceAll(regex,s);
+		System.out.println(str);
 	}
 }

@@ -1,4 +1,7 @@
 package day01;
+
+import java.util.Scanner;
+
 /**
  * 要求用户输入一个计算表达式，可以使用加减乘除。
  * 只处理一次运算的，不要有连续加减乘除的表达式,且不做小数计算。(例:1+2+3)
@@ -10,10 +13,18 @@ package day01;
  */
 public class Test06 {
 	public static void main(String[] args) {
-		
+		Scanner console = new Scanner(System.in);
+		System.out.println("输入一个计算表达式：");
+		String str = console.nextLine();
+		String regex = "[+*/-]";
+		String[] s = str.split(regex);
+		int sum1 = parseInt(s[0]);
+		int sum2 = parseInt(s[1]);
+		char ch = str.charAt(s[0].length());
+		result(ch,str,sum1,sum2);
 	}
 	public static int parseInt(String str){
-		// 最后要生成的数字
+		// 最后要生成的数字计算表达式
 		int num = 0;
 		// 临时变量，用于计算对应位数的数字
 		int flag = 0;
@@ -30,6 +41,17 @@ public class Test06 {
 			num += flag;
 		}
 		return num;
+	}
+	public static void result(char ch,String str,int sum1,int sum2){
+		if(ch == '+') {
+			System.out.println(str + "=" + (sum1 + sum2));
+		}else if(ch == '*'){
+			System.out.println(str + "=" + (sum1 * sum2));
+		}else if(ch == '-'){
+			System.out.println(str + "=" + (sum1 - sum2));
+		}else if(ch == '/'){
+			System.out.println(str + "=" + (sum1 / sum2));
+		}
 	}
 }
 
