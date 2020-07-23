@@ -21,7 +21,8 @@ public class Test06 {
 		int sum1 = parseInt(s[0]);
 		int sum2 = parseInt(s[1]);
 		char ch = str.charAt(s[0].length());
-		result(ch,str,sum1,sum2);
+		int r = result(ch,sum1,sum2);
+		System.out.println(str + "=" + r);
 	}
 	public static int parseInt(String str){
 		// 最后要生成的数字计算表达式
@@ -42,15 +43,15 @@ public class Test06 {
 		}
 		return num;
 	}
-	public static void result(char ch,String str,int sum1,int sum2){
+	public static int result(char ch,int sum1,int sum2){
 		if(ch == '+') {
-			System.out.println(str + "=" + (sum1 + sum2));
+			return sum1 + sum2;
 		}else if(ch == '*'){
-			System.out.println(str + "=" + (sum1 * sum2));
+			return sum1 * sum2;
 		}else if(ch == '-'){
-			System.out.println(str + "=" + (sum1 - sum2));
-		}else if(ch == '/'){
-			System.out.println(str + "=" + (sum1 / sum2));
+			return sum1 - sum2;
+		}else{
+			return sum1 / sum2;
 		}
 	}
 }

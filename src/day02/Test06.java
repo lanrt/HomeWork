@@ -6,5 +6,9 @@ package day02;
  *
  */
 public class Test06 {
-
+    public static void main(String[] args) {
+        String regex = "[0-9]{3,4}\\-[0-9]{7,8}";
+        String str = "0415-5561111";
+        System.out.println(str.matches(regex));
+    }
 }
