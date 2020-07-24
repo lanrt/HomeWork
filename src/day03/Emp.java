@@ -39,9 +39,8 @@ public class Emp {
 
     @Override
     public String toString() {
-        return name + ", " + age + ", " + gender + ", " + salary + ", " + hiredate;
+        return "姓名:" + name + ",年龄:" + age + ",性别:" + gender + ",薪资:" + salary + ",入职时间:" + hiredate;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

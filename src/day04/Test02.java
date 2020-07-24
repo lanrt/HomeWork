@@ -28,9 +28,7 @@ public class Test02 {
                 iterator.remove();
             }
         }
-        Iterator<String> iterator1 = c.iterator();
-        while(iterator1.hasNext()){
-            String str = iterator1.next();
+        for (String str:c) {
             System.out.println(str);
         }
     }
