@@ -1,4 +1,7 @@
 package day05;
+
+import java.util.Collections;
+
 /**
  * 要求用户输入若干员工信息，格式为：
  * name,age,gender,salary,hiredate;name,age,gender,salary,hiredate;....
@@ -13,5 +16,7 @@ package day05;
  *
  */
 public class Test03 {
+    public static void main(String[] args) {
 
+    }
 }
