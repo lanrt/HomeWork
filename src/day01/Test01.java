@@ -57,7 +57,7 @@ public class Test01 {
 		System.out.println(str.trim());
 	}
 	public static void test7(String str){
-		System.out.println(str.charAt(6));
+		System.out.println(str.charAt(5));
 	}
 	public static void test8(String str){
 		System.out.println(str.startsWith("h"));

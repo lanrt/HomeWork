@@ -1,5 +1,6 @@
 package day05;
 
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
@@ -10,5 +11,15 @@ import java.util.Queue;
  */
 public class Test01 {
     public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+        queue.offer(4);
+        queue.offer(5);
+
+        for (int i : queue) {
+            System.out.println(i);
+        }
     }
 }
