@@ -5,5 +5,11 @@ package day09;
  *
  */
 public class Test01 {
+    public static void main(String[] args) {
+        Test01Thread t1 = new Test01Thread("你好");
+        Test01Thread t2 = new Test01Thread("再见");
 
+        t1.start();
+        t2.start();
+    }
 }
