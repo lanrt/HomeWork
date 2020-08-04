@@ -50,8 +50,7 @@ public class Emp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Emp emp = (Emp) o;
-        return age == emp.age &&
-                Objects.equals(name, emp.name);
+        return age == emp.age && emp.name.equals(name);
     }
 
     @Override
