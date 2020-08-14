@@ -31,8 +31,8 @@ public class Test10 {
         emp.setSalary(Integer.parseInt(split[3]));
         SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
         emp.setHiredate(s.parse(split[4]));
-        Writer os = new OutputStreamWriter(new FileOutputStream(split[0] + ".emp"));
-        os.write(emp.toString());
-        os.close();
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(split[0] + ".emp"));
+        oos.writeObject(emp);
+        oos.close();
     }
 }

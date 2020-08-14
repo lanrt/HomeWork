@@ -1,5 +1,6 @@
 package day06;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Objects;
  * @author Bonnie
  *
  */
-public class Emp {
+public class Emp implements Serializable {
     private String name;
     private int age;
     private String gender;
